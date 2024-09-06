@@ -1,0 +1,10 @@
+.error{
+    background-color: #f44336;
+}
+.notification {
+    display: none;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    margin-bottom: 15px;
+  }

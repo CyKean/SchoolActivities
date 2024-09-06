@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <div class="flex justify-center items-center content-center w-screen h-screen p-3">
+        <div class="border border-green-500 p-3 rounded-md flex flex-col justify-center items-center">
+            <div class="border border-green-500 rounded-md mb-2">
+              <h3 class="text-center p-3 text-xl">Hi! I'm <a href="/profile" class="text-green-700 font-semibold">{{user.username}}</a><br>
+                  welcome to my Blog</h3>
+              <div class="flex justify-center content-center m-2">
+                <form id="logoutForm" action="/logout" method="GET">
+                  <button type="submit" onclick="confirmLogout(event)" class="bg-red-500 text-gray-200 p-2 rounded-md hover:bg-red-400 hover:text-white">Logout</button>
+                </form>
+              </div>
+            </div>
+
+            <a href="/about" class="w-auto bg-green-500 text-white hover:text-black hover:bg-green-300 p-2 w-full rounded-md text-center">Who am I?</a>
+            
+        </div>
+    </div>
+
+<script>
+  function confirmLogout(event) {
+    event.preventDefault(); 
+    const confirmed = confirm("Are you sure you want to log out?");
+    if (confirmed) {
+      document.getElementById('logoutForm').submit();
+    }
+  }
+</script>
+</body>
+</html>

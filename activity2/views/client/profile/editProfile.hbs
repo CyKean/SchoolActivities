@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    {{!-- <h1>Edit User Info</h1>
+
+<form action="/profile/edit" method="POST">
+  <div>
+    <label for="username">Username</label>
+    <input type="text" name="username" value="{{user.username}}" required>
+  </div>
+
+  <div>
+    <label for="email">Email</label>
+    <input type="email" name="email" value="{{user.email}}" required>
+  </div>
+
+  <div>
+    <label for="password">New Password</label>
+    <input type="password" name="password" required>
+  </div>
+
+  <button type="submit" class="btn">Save Changes</button>
+</form> --}}
+
+<div class="flex justify-center items-center content-center p-3  w-screen h-screen">
+        <div class="border border-green-500 p-3 rounded-md flex flex-col justify-center items-center">
+            <h1 class="mb-2 text-xl font-medium">Edit User Info</h1>
+            <div id="notification" class="notification"></div>
+            <div class="border border-green-500 rounded-md mb-2 flex flex-col p-4">
+                <form action="/profile/edit" method="POST">
+                    <label for="" class="mb-2">Username</label><br>
+                    <input type="text" name="username" id="username" value="{{user.username}}" required class="w-auto rounded-md border border-green-500 p-2 mb-3"><br>
+                    <label for="" class="mb-2">Email</label><br>
+                    <input type="text" name="email" id="email" value="{{user.email}}" required class="w-auto rounded-md border border-green-500 p-2 mb-3"><br>
+                    <label for="">New password</label><br>
+                    <input type="text" name="password" id="password" class="w-auto rounded-md border border-green-500 p-2 mb-4"><br>
+
+                    <div class="w-full flex justify-center content-center items-center">
+                        <button type="submit" class="w-full bg-green-500  hover:text-green-100 hover:bg-green-400 p-2 rounded-md text-center">save changes</button>
+                    </div>
+                </form>
+            </div>
+            <div class="flex p-2 text-sm">
+               <a href="/profile" class="bg-red-500 text-gray-200 p-2 rounded-md hover:bg-red-400 hover:text-white">cancel</a>
+            </div>
+        </div>
+    </div>  
+
+</body>
+</html>

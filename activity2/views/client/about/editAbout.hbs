@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit About</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    {{!-- <h1>Edit About Information</h1>
+
+    {{#if notification}}
+        <p style="color: red;">{{notification}}</p>
+    {{/if}}
+
+    <form action="/about/edit" method="post">
+        <textarea name="content" rows="10" cols="50" required>{{about.content}}</textarea>
+        <br>
+        <button type="submit">Update About</button>
+    </form>
+
+    <a href="/about">Back to About</a> --}}
+
+     <div class="flex justify-center items-center content-center w-screen h-screen p-3">
+        <div class="border border-green-500 p-3 rounded-md flex flex-col justify-center items-center">
+            <div class="flex w-full m-2">
+                <a href="/home" class="flex text-left text-green-700"><-back-</a>
+            </div>
+            <div class="border border-green-500 rounded-md mb-2">
+                {{#if notification}}
+                    <p style="color: red;">{{notification}}</p>
+                {{/if}}
+              <h3 class="text-center p-3 text-xl">Edit About Information</a></h3>
+
+               <form action="/about/edit" method="post">
+                    <div class="flex m-2">
+                        <textarea class="p-3 border border-green-500 rounded-md" name="content" rows="10" cols="50" placeholder="Write something about yourself..." required>{{about.content}}</textarea>
+                    </div>
+                    <br>
+                    <div class="flex m-2">
+                        <button type="submit"  class="bg-green-500 text-gray-200 p-2 rounded-md hover:bg-green-400 hover:text-white w-full rounded-md">Edit About</button>
+                    </div>
+                </form>
+            </div>
+                    
+        </div>
+    </div>
+</body>
+</html>
